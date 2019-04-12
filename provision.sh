@@ -1,5 +1,11 @@
 #!/bin/sh
 
-PACKAGES="zsh vim git"
+sudo pkgin update
 
-sudo pkgin -y install $PACKAGES
+PACKAGES="zsh vim"
+
+if [ -z "$NETBSD_UTILS" ]; then
+  sudo pkgin -y install $PACKAGES
+fi
+
+
