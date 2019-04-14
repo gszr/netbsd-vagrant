@@ -2,3 +2,4 @@
 !.gitignore
 !Vagrantfile
 !provision.sh
+!README.md
