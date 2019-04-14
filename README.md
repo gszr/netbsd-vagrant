@@ -27,8 +27,8 @@ NetBSD VM over NFS, mounted to `/work`
 - Unless `NETBSD_CPUS` is specified, the box will have 8 CPUs
 
 On `vagrant up`, the script `provision.sh` will be executed. Currently, it:
-- Installs a few packages, unless a `NETBSD_PACKAGES` environment variable is
-passed empty
+- Installs a few packages, unless a `NETBSD_NO_PACKAGES` environment variable
+is passed (with any value)
 - Link `/work/src` to `/usr/src` - if `/work/src` exists, it's assumed to be
 the NetBSD source tree
 - Create `/usr/tools`, `/usr/obj`, and assign permissions over them to the

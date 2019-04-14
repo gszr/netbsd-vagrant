@@ -18,5 +18,6 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.provision "shell", path: "provision.sh",
-    env: {"NETBSD_UTILS": ENV["NETBSD_UTILS"]}
+    env: {"NETBSD_PACKAGES": ENV["NETBSD_PACKAGES"],
+          "NETBSD_NO_PACKAGES": ENV["NETBSD_NO_PACKAGES"]}
 end

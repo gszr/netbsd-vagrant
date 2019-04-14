@@ -1,10 +1,10 @@
 #!/bin/sh
 
-NETBSD_PACKAGES=${PACKAGES:="zsh vim mercurial git-base htop"}
+NETBSD_PACKAGES=${NETBSD_PACKAGES:="zsh vim mercurial git-base htop"}
 
 sudo pkgin -y update
 
-if [ -n "$NETBSD_PACKAGES" ]; then
+if [ -z "$NETBSD_NO_PACKAGES" ]; then
   sudo pkgin -y install $NETBSD_PACKAGES
 fi
 
